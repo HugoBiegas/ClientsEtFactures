@@ -1,6 +1,7 @@
 package metier;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Client
@@ -67,7 +68,13 @@ public class Client
 	
 	public int sommeMontants()
 	{
-		return 0;
+		int cpt=0;
+		Facture F;
+		for(int i=0;i<listedesfacture.size();i++) {
+			F =listedesfacture.get(i);
+			cpt = cpt + F.getMontant();
+		}
+		return cpt;
 	}
 
 	/**
