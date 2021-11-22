@@ -48,7 +48,7 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		Facture F = new Facture(montant);
+		Facture F = new Facture(montant, this);
 		listedesfacture.add(F);
 		return F;
 	}
@@ -88,7 +88,7 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		Facture F = new Facture(montant,reglee);
+		Facture F = new Facture(montant,reglee, this);
 		return F;
 	}	
 	

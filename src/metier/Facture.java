@@ -15,15 +15,17 @@ public class Facture
 	
 	public Facture() {}
 	
-	public Facture(int montant, boolean reglee) {
+	public Facture(int montant, boolean reglee, Client nom) {
 		this.Date= LocalDate.now();
 		this.Montant=montant;
 		this.reglementfacture=reglee;
+		this.client=nom;
 	}
 
-	public Facture(int Montant) {
+	public Facture(int Montant, Client nom) {
 		this.Montant=Montant;
 		this.Date= LocalDate.now();
+		this.client=nom;
 
 	}
 	
