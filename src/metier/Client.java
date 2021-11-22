@@ -38,7 +38,6 @@ public class Client
 	public void setNom(String nom)
 	{
 		this.nom=nom;
-		listedesclient.add(this);
 	}
 	
 	/**
