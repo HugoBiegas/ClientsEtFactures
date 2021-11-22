@@ -1,7 +1,6 @@
 package metier;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class Client
@@ -11,7 +10,7 @@ public class Client
 	 * @param nom le nom du client. 
 	 */
 	private String nom ;
-	List<Facture> listedesfacture = new ArrayList<>();
+	private List<Facture> listedesfacture = new ArrayList<>();
 	static List<Client> listedesclient = new ArrayList<>();
 	
 	public Client(String nom)
