@@ -127,5 +127,7 @@ public class Client
 	public void delete()
 	{
 		this.nom = null;
+		this.listedesfacture = null;
+		this.listedesclient = null;
 	}
 }
