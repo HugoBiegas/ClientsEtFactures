@@ -74,6 +74,7 @@ public class Facture
 	
 	public Facture copie()
 	{
-		return new Facture(this.Date,this.Montant,this.reglementfacture,this.client);
+		Facture f = new Facture(this.Date,this.Montant,this.reglementfacture,this.client);
+		return f;
 	}
 }
