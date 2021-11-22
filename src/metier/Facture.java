@@ -22,6 +22,7 @@ public class Facture
 
 	public Facture(int Montant) {
 		this.Montant=Montant;
+		
 
 	}
 	
