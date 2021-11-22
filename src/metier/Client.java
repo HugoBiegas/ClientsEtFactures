@@ -12,10 +12,12 @@ public class Client
 	 */
 	private String nom ;
 	List<Facture> listedesfacture = new ArrayList<>();
+	static List<Client> listedesclient = new ArrayList<>();
 	
 	public Client(String nom)
 	{
 		this.nom=nom;
+		listedesclient.add(this);
 	}
 
 	/**
@@ -36,6 +38,7 @@ public class Client
 	public void setNom(String nom)
 	{
 		this.nom=nom;
+		listedesclient.add(this);
 	}
 	
 	/**
@@ -101,7 +104,7 @@ public class Client
 		Facture F;
 		for(int i=0;i<listedesfacture.size();i++) {
 			F =listedesfacture.get(i);
-			if(F.estReglee() ==true) {
+			if(F.estReglee() == true) {
 				fac.add(F);
 			}
 		}
@@ -115,7 +118,7 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		return null;
+		return listedesclient;
 	}
 	
 	/**
