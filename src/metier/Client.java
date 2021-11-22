@@ -9,7 +9,7 @@ public class Client
 	 * Crée un client.
 	 * @param nom le nom du client. 
 	 */
-	static List<Client> listedesclient = new ArrayList<>();
+	private static List<Client> listedesclient = new ArrayList<>();
 	private String nom ;
 	private List<Facture> listedesfacture = new ArrayList<>();
 
