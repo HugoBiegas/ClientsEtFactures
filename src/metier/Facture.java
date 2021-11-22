@@ -13,6 +13,14 @@ public class Facture
 	private boolean reglementfacture;
 	private Client client;
 	
+	public Facture(LocalDate Date,int Montant,boolean reglement,Client client ) {
+		this.Date= Date;
+		this.Montant=Montant;
+		this.reglementfacture=reglement;
+		this.client=client;
+	}
+	
+	
 	public Client getClient()
 	{	
 		return this.client;
@@ -64,8 +72,6 @@ public class Facture
 	
 	public Facture copie()
 	{
-		Facture F = new Facture();
-		
-		return null;
+		return new Facture(this.Date,this.Montant,this.reglementfacture,this.client);
 	}
 }
