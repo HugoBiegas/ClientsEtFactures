@@ -13,6 +13,8 @@ public class Facture
 	private boolean reglementfacture;
 	private Client client;
 	
+	public Facture() {}
+	
 	public Facture(LocalDate Date,int Montant,boolean reglement,Client client ) {
 		this.Date= Date;
 		this.Montant=Montant;
