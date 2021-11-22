@@ -6,12 +6,14 @@ import java.util.List;
 public class Client
 {
 	/** 
-	 * CrÃ©e un client.
+	 * Crée un client.
 	 * @param nom le nom du client. 
 	 */
+	private String nom ;
 	
 	public Client(String nom)
 	{
+		this.nom=nom;
 	}
 
 	/**
@@ -21,7 +23,7 @@ public class Client
 	
 	public String getNom()
 	{
-		return null;
+		return this.nom;
 	}
 	
 	/**
@@ -31,16 +33,18 @@ public class Client
 	
 	public void setNom(String nom)
 	{
+		this.nom=nom;
 	}
 	
 	/**
-	 * CrÃ©Ã© une facture.
+	 * Créé une facture.
 	 * @param montant Le montant de la facture.
-	 * @return la facture crÃ©Ã©e.
+	 * @return la facture créée.
 	 */
 	
 	public Facture createFacture(int montant)
 	{
+		Facture F = new Facture();
 		return null;
 	}
 	
@@ -65,10 +69,10 @@ public class Client
 	}
 
 	/**
-	 * CrÃ©Ã© une facture en prÃ©cisant si elle est reglÃ©e.
+	 * Créé une facture en précisant si elle est reglée.
 	 * @param montant Le montant de la facture.
-	 * @param reglÃ©e Vrai si la facture est reglÃ©e.
-	 * @return la facture crÃ©Ã©e.
+	 * @param reglée Vrai si la facture est reglée.
+	 * @return la facture créée.
 	 */
 	
 	public Facture createFacture(int montant, boolean reglee)
@@ -77,8 +81,8 @@ public class Client
 	}	
 	
 	/**
-	 * Retourne la liste des factures reglÃ©es. 
-	 * @return la liste des factures reglÃ©es.
+	 * Retourne la liste des factures reglées. 
+	 * @return la liste des factures reglées.
 	 */
 
 	public List<Facture> facturesReglees()
@@ -88,7 +92,7 @@ public class Client
 	
 
 	/**
-	 * Retourne tous les clients crÃ©Ã©s.
+	 * Retourne tous les clients créés.
 	 * @return une copie de la liste de tous les clients.
 	 */
 	public static List<Client> tous()
