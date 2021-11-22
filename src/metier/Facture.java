@@ -15,6 +15,15 @@ public class Facture
 	
 	public Facture() {}
 	
+	public Facture(int montant, boolean reglee) {
+		this.Montant=montant;
+		this.reglementfacture=reglee;
+	}
+
+	public Facture(int Montant) {
+		this.Montant=Montant;
+	}
+	
 	public Facture(LocalDate Date,int Montant,boolean reglement,Client client ) {
 		this.Date= Date;
 		this.Montant=Montant;
@@ -64,7 +73,10 @@ public class Facture
 	
 	public void delete()
 	{
-		
+		this.Date= null;
+		this.Montant=0;
+		this.reglementfacture=false;
+		this.client=null;
 	}
 	
 	/**
