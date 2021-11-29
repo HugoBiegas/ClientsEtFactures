@@ -71,10 +71,11 @@ public class Client
 	public int sommeMontants()
 	{
 		int cpt=0;
-		Facture F;
-		for(int i=0;i<listedesfacture.size();i++) {
-			F =listedesfacture.get(i);
-			cpt = cpt + F.getMontant();
+		Facture f;
+		for(int i=0;i<listedesfacture.size();i++) 
+		{
+			f =listedesfacture.get(i);
+			cpt = cpt + f.getMontant();
 		}
 		return cpt;
 	}
@@ -88,8 +89,8 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		Facture F = new Facture(montant,reglee, this);
-		return F;
+		Facture f = new Facture(montant,reglee, this);
+		return f;
 	}	
 	
 	/**
@@ -100,11 +101,13 @@ public class Client
 	public List<Facture> facturesReglees()
 	{
 		List<Facture> fac = new ArrayList<>();
-		Facture F;
-		for(int i=0;i<listedesfacture.size();i++) {
-			F =listedesfacture.get(i);
-			if(F.estReglee() == true) {
-				fac.add(F);
+		Facture f;
+		for(int i=0;i<listedesfacture.size();i++) 
+		{
+			f =listedesfacture.get(i);
+			if(f.estReglee() == true) 
+			{
+				fac.add(f);
 			}
 		}
 		return fac;
