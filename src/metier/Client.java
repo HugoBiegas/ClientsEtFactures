@@ -22,6 +22,7 @@ public class Client
 	
 	public void gesterreurilegal(String s) 
 	{
+		
 		System.out.println("Le montant d'une facture ne peut pas Ãªtre nÃ©gatif.");
 	}
 
@@ -125,9 +126,9 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture(int montant, boolean reglee) throws IllegalArgumentException 
+	public Facture createFacture (int montant, boolean reglee) 
 	{
-		Facture f = new Facture(montant,reglee, this);
+		Facture f = new Facture(montant,reglee,this);
 		listedesfacture.add(f);
 		return f;
 	}	
@@ -138,7 +139,7 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture(int montant) throws IllegalArgumentException
+	public Facture createFacture(int montant)
 	{
 		Facture f = new Facture(montant, this);
 		listedesfacture.add(f);
