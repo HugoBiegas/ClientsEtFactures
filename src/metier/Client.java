@@ -124,9 +124,9 @@ public class Client
 	{
 		try 
 		{
-		Facture f = new Facture(montant,reglee,this);
-		listedesfacture.add(f);
-		return f;
+			Facture f = new Facture(montant,reglee,this);
+			listedesfacture.add(f);
+			return f;
 		}
 		catch(IllegalArgumentException e) 
 		{
@@ -145,9 +145,9 @@ public class Client
 	{
 		try 
 		{
-		Facture f = new Facture(montant, this);
-		listedesfacture.add(f);
-		return f;
+			Facture f = new Facture(montant, this);
+			listedesfacture.add(f);
+			return f;
 		}
 		catch(IllegalArgumentException e) 
 		{
