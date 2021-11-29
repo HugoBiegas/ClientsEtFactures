@@ -122,11 +122,13 @@ public class Client
 	
 	public Facture createFacture (int montant, boolean reglee) 
 	{
-		try {
+		try 
+		{
 		Facture f = new Facture(montant,reglee,this);
 		listedesfacture.add(f);
 		return f;
-		}catch(IllegalArgumentException e) 
+		}
+		catch(IllegalArgumentException e) 
 		{
 			System.out.println(e);
 		}
@@ -141,11 +143,13 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		try {
+		try 
+		{
 		Facture f = new Facture(montant, this);
 		listedesfacture.add(f);
 		return f;
-		}catch(IllegalArgumentException e) 
+		}
+		catch(IllegalArgumentException e) 
 		{
 			System.out.println(e);
 		}
