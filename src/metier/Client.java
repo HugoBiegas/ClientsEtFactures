@@ -40,18 +40,6 @@ public class Client
 		this.nom=nom;
 	}
 	
-	/**
-	 * Créé une facture.
-	 * @param montant Le montant de la facture.
-	 * @return la facture créée.
-	 */
-	
-	public Facture createFacture(int montant)
-	{
-		Facture f = new Facture(montant, this);
-		listedesfacture.add(f);
-		return f;
-	}
 	
 	/**
 	 * Retourne une copie de la liste des factures du client. 
@@ -92,6 +80,19 @@ public class Client
 		Facture f = new Facture(montant,reglee, this);
 		return f;
 	}	
+	
+	/**
+	 * Créé une facture.
+	 * @param montant Le montant de la facture.
+	 * @return la facture créée.
+	 */
+	
+	public Facture createFacture(int montant)
+	{
+		Facture f = new Facture(montant, this);
+		listedesfacture.add(f);
+		return f;
+	}
 	
 	/**
 	 * Retourne la liste des factures reglées. 
