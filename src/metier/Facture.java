@@ -82,6 +82,10 @@ public class Facture
 	
 	public void delete()
 	{
+		this.date= null;
+		this.montant= 0;
+		this.reglementfacture=false;
+		this.client=null;	
 	}
 	
 	/**
