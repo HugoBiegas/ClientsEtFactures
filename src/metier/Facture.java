@@ -27,6 +27,7 @@ public class Facture
 	{
 		this.montant=montant;
 		this.date= LocalDate.now();
+		this.reglementfacture = false;
 		this.client=client;
 
 	}
