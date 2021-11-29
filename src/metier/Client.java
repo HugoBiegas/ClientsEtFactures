@@ -122,13 +122,16 @@ public class Client
 	
 	public Facture createFacture (int montant, boolean reglee) 
 	{
-			if(montant<0) {
+			if(montant<0) 
+			{
 				System.out.println("Le montant d'une facture ne peut pas être négatif.");
 				return null;
-			}else {
-			Facture f = new Facture(montant,reglee,this);
-			listedesfacture.add(f);
-			return f;
+			}
+			else 
+			{
+				Facture f = new Facture(montant,reglee,this);
+				listedesfacture.add(f);
+				return f;
 			}
 	}	
 	
@@ -140,10 +143,13 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		if(montant<0) {
+		if(montant<0) 
+		{
 			System.out.println("Le montant d'une facture ne peut pas être négatif.");
 			return null;
-		}else {
+		}
+		else 
+		{
 			Facture f = new Facture(montant, this);
 			listedesfacture.add(f);
 			return f;
