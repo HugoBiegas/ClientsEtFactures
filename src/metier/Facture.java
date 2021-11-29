@@ -10,7 +10,7 @@ public class Facture
 	 */
 	private	LocalDate date;
 	private int montant;
-	private boolean reglementfacture = false;
+	private boolean reglementfacture;
 	private Client client;
 	
 	public Facture() {}
@@ -23,18 +23,18 @@ public class Facture
 		this.client=nom;
 	}
 
-	public Facture(int Montant, Client nom) 
+	public Facture(int montant, Client nom) 
 	{
-		this.montant=Montant;
+		this.montant=montant;
 		this.date= LocalDate.now();
 		this.client=nom;
 
 	}
 	
-	public Facture(LocalDate Date,int Montant,boolean reglement,Client client ) 
+	public Facture(LocalDate date,int montant,boolean reglement,Client client ) 
 	{
-		this.date= LocalDate.now();
-		this.montant=Montant;
+		this.date= date;
+		this.montant=montant;
 		this.reglementfacture=reglement;
 		this.client=client;
 	}
