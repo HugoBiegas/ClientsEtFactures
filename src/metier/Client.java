@@ -106,7 +106,7 @@ public class Client
 		for(int i=0;i<listedesfacture.size();i++) 
 		{
 			f =listedesfacture.get(i);
-			if(f.estReglee() == true) 
+			if(f.estReglee()) 
 			{
 				fac.add(f);
 			}
