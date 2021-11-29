@@ -124,8 +124,7 @@ public class Client
 	{
 			if(montant<0) 
 			{
-				System.out.println("Le montant d'une facture ne peut pas être négatif.");
-				return null;
+				throw new IllegalArgumentException() ;
 			}
 			else 
 			{
@@ -134,7 +133,7 @@ public class Client
 				return f;
 			}
 	}	
-	
+
 	/**
 	 * Cr�� une facture.
 	 * @param montant Le montant de la facture.
@@ -145,8 +144,7 @@ public class Client
 	{
 		if(montant<0) 
 		{
-			System.out.println("Le montant d'une facture ne peut pas être négatif.");
-			return null;
+			throw new IllegalArgumentException() ;
 		}
 		else 
 		{
