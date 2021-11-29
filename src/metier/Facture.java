@@ -10,7 +10,7 @@ public class Facture
 	 */
 	private	LocalDate date;
 	private int montant;
-	private boolean reglementfacture = false;
+	private boolean reglementfacture;
 	private Client client;
 	
 	public Facture() {}
@@ -82,7 +82,7 @@ public class Facture
 	
 	public void delete()
 	{
-		
+
 	}
 	
 	/**
@@ -92,6 +92,6 @@ public class Facture
 	
 	public Facture copie()
 	{
-		return client.createFacture(this.montant );
+		return client.createFacture(this.montant,this.reglementfacture);
 	}
 }

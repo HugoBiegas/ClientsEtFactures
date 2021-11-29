@@ -54,18 +54,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		List<Facture> fac = new ArrayList<>();
-		Client cli;
-		Facture f;
-		for (int i = 0; i <listedesfacture.size() ; i++) 
-		{
-			f = listedesfacture.get(i);
-			cli = listedesclient.get(i);
-			if(cli.getNom() == this.nom) 
-			{
-				fac.add(f);
-			}
-		}
+		List<Facture> fac = new ArrayList<>(this.listedesfacture);
 		return fac;
 	}
 	
