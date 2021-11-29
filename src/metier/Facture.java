@@ -8,30 +8,33 @@ public class Facture
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
 	 */
-	private	LocalDate Date;
-	private int Montant;
+	private	LocalDate date;
+	private int montant;
 	private boolean reglementfacture = false;
 	private Client client;
 	
 	public Facture() {}
 	
-	public Facture(int montant, boolean reglee, Client nom) {
-		this.Date= LocalDate.now();
-		this.Montant=montant;
+	public Facture(int montant, boolean reglee, Client nom) 
+	{
+		this.date= LocalDate.now();
+		this.montant=montant;
 		this.reglementfacture=reglee;
 		this.client=nom;
 	}
 
-	public Facture(int Montant, Client nom) {
-		this.Montant=Montant;
-		this.Date= LocalDate.now();
+	public Facture(int Montant, Client nom) 
+	{
+		this.montant=Montant;
+		this.date= LocalDate.now();
 		this.client=nom;
 
 	}
 	
-	public Facture(LocalDate Date,int Montant,boolean reglement,Client client ) {
-		this.Date= LocalDate.now();
-		this.Montant=Montant;
+	public Facture(LocalDate Date,int Montant,boolean reglement,Client client ) 
+	{
+		this.date= LocalDate.now();
+		this.montant=Montant;
 		this.reglementfacture=reglement;
 		this.client=client;
 	}
@@ -49,7 +52,7 @@ public class Facture
 	
 	public int getMontant()
 	{
-		return this.Montant;
+		return this.montant;
 	}
 
 	/**
@@ -69,7 +72,7 @@ public class Facture
 	
 	public LocalDate getDate()
 	{
-		return this.Date;
+		return this.date;
 	}
 
 	/**
@@ -88,7 +91,7 @@ public class Facture
 	
 	public Facture copie()
 	{
-		Facture f = new Facture(this.Date,this.Montant,this.reglementfacture,this.client);
+		Facture f = new Facture(this.date,this.montant,this.reglementfacture,this.client);
 		return f;
 	}
 }
