@@ -58,6 +58,11 @@ public class Client
 		return fac;
 	}
 	
+	public List<Facture> getFac()
+	{
+		return listedesfacture;
+	}
+	
 	/**
 	 * Retourne la somme des montants des factures.
 	 * @return la somme des montants des factures.

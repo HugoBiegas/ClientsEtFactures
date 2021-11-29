@@ -1,7 +1,6 @@
 package metier;
 
 import java.time.LocalDate;
-import java.util.List;
 
 public class Facture
 {
@@ -83,7 +82,7 @@ public class Facture
 	
 	public void delete()
 	{
-		client.getFactures().remove(this);
+		client.getFac().remove(this);
 	}
 	
 	/**
