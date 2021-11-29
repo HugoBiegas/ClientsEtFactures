@@ -82,7 +82,6 @@ public class Facture
 	
 	public void delete()
 	{
-
 	}
 	
 	/**

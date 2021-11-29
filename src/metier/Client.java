@@ -136,6 +136,6 @@ public class Client
 	}
 	public void delete()
 	{
-		
+		listedesclient.remove(this);
 	}
 }
