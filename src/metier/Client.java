@@ -13,32 +13,6 @@ public class Client
 	private String nom ;
 	private List<Facture> listedesfacture = new ArrayList<>();
 	
-	/**
-	 * Créé une facture en précisant si elle est reglée.
-	 * @param montant Le montant de la facture.
-	 * @param reglée Vrai si la facture est reglée.
-	 * @return la facture créée.
-	 */
-	
-	public Facture createFacture(int montant, boolean reglee) throws IllegalArgumentException 
-	{
-		Facture f = new Facture(montant,reglee, this);
-		listedesfacture.add(f);
-		return f;
-	}	
-	
-	/**
-	 * Créé une facture.
-	 * @param montant Le montant de la facture.
-	 * @return la facture créée.
-	 */
-	
-	public Facture createFacture(int montant) throws IllegalArgumentException
-	{
-		Facture f = new Facture(montant, this);
-		listedesfacture.add(f);
-		return f;
-	}
 		
 	public Client(String nom)
 	{
@@ -144,7 +118,32 @@ public class Client
 	/**
 	 * Supprime le client.
 	 */
+	/**
+	 * Créé une facture en précisant si elle est reglée.
+	 * @param montant Le montant de la facture.
+	 * @param reglée Vrai si la facture est reglée.
+	 * @return la facture créée.
+	 */
 	
+	public Facture createFacture(int montant, boolean reglee) throws IllegalArgumentException 
+	{
+		Facture f = new Facture(montant,reglee, this);
+		listedesfacture.add(f);
+		return f;
+	}	
+	
+	/**
+	 * Créé une facture.
+	 * @param montant Le montant de la facture.
+	 * @return la facture créée.
+	 */
+	
+	public Facture createFacture(int montant) throws IllegalArgumentException
+	{
+		Facture f = new Facture(montant, this);
+		listedesfacture.add(f);
+		return f;
+	}
 	public void delete()
 	{
 		
