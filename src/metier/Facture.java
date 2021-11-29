@@ -91,7 +91,6 @@ public class Facture
 	
 	public Facture copie()
 	{
-		Facture f = new Facture(this.date,this.montant,this.reglementfacture,this.client);
-		return f;
+		return client.createFacture(this.montant,this.reglementfacture);
 	}
 }
