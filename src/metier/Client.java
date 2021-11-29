@@ -128,7 +128,7 @@ public class Client
 		return f;
 		}catch(IllegalArgumentException e) 
 		{
-			System.out.println("Le montant d'une facture ne peut pas être négatif.");
+			System.out.println(e);
 		}
 		return null;
 	}	
