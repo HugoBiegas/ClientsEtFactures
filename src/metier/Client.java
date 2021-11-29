@@ -39,15 +39,16 @@ public class Client
 		listedesfacture.add(f);
 		return f;
 	}
-	
-	public void IllegalArgumentException(String s) 
-	{
-		System.out.println("Le montant d'une facture ne peut pas être négatif.");
-	}
+		
 	public Client(String nom)
 	{
 		this.nom=nom;
 		listedesclient.add(this);
+	}
+	
+	public void gesterreurilegal(String s) 
+	{
+		System.out.println("Le montant d'une facture ne peut pas être négatif.");
 	}
 
 	/**
