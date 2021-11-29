@@ -15,7 +15,7 @@ public class Facture
 	
 	public Facture() {}
 	
-	public Facture(int montant, boolean reglee, Client nom) 
+	public Facture(int montant, boolean reglee, Client nom) throws IllegalArgumentException 
 	{
 		this.date= LocalDate.now();
 		this.montant=montant;
@@ -23,7 +23,7 @@ public class Facture
 		this.client=nom;
 	}
 
-	public Facture(int montant, Client nom) 
+	public Facture(int montant, Client nom) throws IllegalArgumentException 
 	{
 		this.montant=montant;
 		this.date= LocalDate.now();
@@ -31,7 +31,7 @@ public class Facture
 
 	}
 	
-	public Facture(LocalDate date,int montant,boolean reglement,Client client ) 
+	public Facture(LocalDate date,int montant,boolean reglement,Client client )throws IllegalArgumentException  
 	{
 		this.date= date;
 		this.montant=montant;

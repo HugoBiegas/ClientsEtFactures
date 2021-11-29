@@ -20,7 +20,7 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture(int montant, boolean reglee)
+	public Facture createFacture(int montant, boolean reglee) throws IllegalArgumentException 
 	{
 		Facture f = new Facture(montant,reglee, this);
 		listedesfacture.add(f);
@@ -33,14 +33,17 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture(int montant)
+	public Facture createFacture(int montant) throws IllegalArgumentException
 	{
 		Facture f = new Facture(montant, this);
 		listedesfacture.add(f);
 		return f;
 	}
 	
-	
+	public void IllegalArgumentException(String s) 
+	{
+		System.out.println("Le montant d'une facture ne peut pas Ãªtre nÃ©gatif.");
+	}
 	public Client(String nom)
 	{
 		this.nom=nom;
