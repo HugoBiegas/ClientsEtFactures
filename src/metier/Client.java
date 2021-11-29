@@ -48,9 +48,9 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		Facture F = new Facture(montant, this);
-		listedesfacture.add(F);
-		return F;
+		Facture Fac = new Facture(montant, this);
+		listedesfacture.add(Fac);
+		return Fac;
 	}
 	
 	/**
