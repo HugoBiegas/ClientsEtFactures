@@ -12,7 +12,34 @@ public class Client
 	private static List<Client> listedesclient = new ArrayList<>();
 	private String nom ;
 	private List<Facture> listedesfacture = new ArrayList<>();
-
+	
+	/**
+	 * Créé une facture en précisant si elle est reglée.
+	 * @param montant Le montant de la facture.
+	 * @param reglée Vrai si la facture est reglée.
+	 * @return la facture créée.
+	 */
+	
+	public Facture createFacture(int montant, boolean reglee)
+	{
+		Facture f = new Facture(montant,reglee, this);
+		listedesfacture.add(f);
+		return f;
+	}	
+	
+	/**
+	 * Créé une facture.
+	 * @param montant Le montant de la facture.
+	 * @return la facture créée.
+	 */
+	
+	public Facture createFacture(int montant)
+	{
+		Facture f = new Facture(montant, this);
+		listedesfacture.add(f);
+		return f;
+	}
+	
 	
 	public Client(String nom)
 	{
@@ -48,7 +75,19 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return this.listedesfacture;
+		List<Facture> fac = new ArrayList<>();
+		Client cli;
+		Facture f;
+		for (int i = 0; i <listedesfacture.size() ; i++) 
+		{
+			f = listedesfacture.get(i);
+			cli = listedesclient.get(i);
+			if(cli.getNom() == this.nom) 
+			{
+				fac.add(f);
+			}
+		}
+		return fac;
 	}
 	
 	/**
@@ -66,33 +105,6 @@ public class Client
 			cpt = cpt + f.getMontant();
 		}
 		return cpt;
-	}
-
-	/**
-	 * Créé une facture en précisant si elle est reglée.
-	 * @param montant Le montant de la facture.
-	 * @param reglée Vrai si la facture est reglée.
-	 * @return la facture créée.
-	 */
-	
-	public Facture createFacture(int montant, boolean reglee)
-	{
-		Facture f = new Facture(montant,reglee, this);
-		listedesfacture.add(f);
-		return f;
-	}	
-	
-	/**
-	 * Créé une facture.
-	 * @param montant Le montant de la facture.
-	 * @return la facture créée.
-	 */
-	
-	public Facture createFacture(int montant)
-	{
-		Facture f = new Facture(montant, this);
-		listedesfacture.add(f);
-		return f;
 	}
 	
 	/**
