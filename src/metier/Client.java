@@ -122,18 +122,16 @@ public class Client
 	
 	public Facture createFacture (int montant, boolean reglee) 
 	{
-		try 
+		if(montant<0) 
+		{
+			throw new IllegalArgumentException() ;
+		}
+		else 
 		{
 			Facture f = new Facture(montant,reglee,this);
 			listedesfacture.add(f);
 			return f;
 		}
-		catch(IllegalArgumentException e) 
-		{
-		 System.out.println("Le montant d'une facture ne peut pas être négatif.");
-		}
-		return null;
-
 	}	
 
 	/**
@@ -144,17 +142,16 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		try 
+		if(montant<0) 
 		{
-			Facture f = new Facture(montant,this);
+			throw new IllegalArgumentException() ;
+		}
+		else 
+		{
+			Facture f = new Facture(montant, this);
 			listedesfacture.add(f);
 			return f;
 		}
-		catch(IllegalArgumentException e) 
-		{
-		 System.out.println("Le montant d'une facture ne peut pas être négatif.");
-		}
-		return null;
 	}
 	public void delete()
 	{
