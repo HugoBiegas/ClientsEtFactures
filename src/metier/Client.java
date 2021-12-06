@@ -122,16 +122,16 @@ public class Client
 	
 	public Facture createFacture (int montant, boolean reglee) 
 	{
-			if(montant<0) 
-			{
-				throw new IllegalArgumentException() ;
-			}
-			else 
-			{
-				Facture f = new Facture(montant,reglee,this);
-				listedesfacture.add(f);
-				return f;
-			}
+		if(montant<0) 
+		{
+			throw new IllegalArgumentException() ;
+		}
+		else 
+		{
+			Facture f = new Facture(montant,reglee,this);
+			listedesfacture.add(f);
+			return f;
+		}
 	}	
 
 	/**
