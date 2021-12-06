@@ -124,7 +124,7 @@ public class Client
 	{
 		if(montant<0) 
 		{
-			throw new IllegalArgumentException("Le montant d'une facture ne peut pas être négatif.") ;
+			throw new IllegalArgumentException() ;
 		}
 		else 
 		{

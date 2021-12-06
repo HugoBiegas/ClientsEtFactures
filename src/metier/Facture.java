@@ -32,33 +32,46 @@ public class Facture
 
 	public Facture(int montant, Client client)  throws IllegalArgumentException
 	{
-		if(montant<0) 
+		try 
 		{
-			throw new IllegalArgumentException("Le montant d'une facture ne peut pas être négatif.") ;
+			if(montant<0) 
+			{
+				throw new IllegalArgumentException() ;
+			}
+			else 
+			{
+				this.montant=montant;
+			}
+				this.date= LocalDate.now();
+				this.reglementfacture = false;
+				this.client=client;
 		}
-		else 
+		catch(IllegalArgumentException e)
 		{
-			this.montant=montant;
+			System.out.println("null");
 		}
-		this.date= LocalDate.now();
-		this.reglementfacture = false;
-		this.client=client;
-
 	}
 	
 	public Facture(LocalDate date,int montant,boolean reglement,Client client )  throws IllegalArgumentException
 	{
-		this.date= date;
-		if(montant<0) 
+		try 
 		{
-			throw new IllegalArgumentException() ;
+			this.date= date;
+			if(montant<0) 
+			{
+				throw new IllegalArgumentException() ;
+			}
+			else 
+			{
+				this.montant=montant;
+			}
+			this.reglementfacture=reglement;
+			this.client=client;
 		}
-		else 
+		catch(IllegalArgumentException e)
 		{
-			this.montant=montant;
+			System.out.println("null");
 		}
-		this.reglementfacture=reglement;
-		this.client=client;
 	}
 	
 	
