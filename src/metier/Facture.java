@@ -20,7 +20,7 @@ public class Facture
 		this.date= LocalDate.now();
 		if(montant<0) 
 		{
-			throw new IllegalArgumentException() ;
+			throw new IllegalArgumentException("null") ;
 		}
 		else 
 		{
@@ -34,7 +34,7 @@ public class Facture
 	{
 		if(montant<0) 
 		{
-			throw new IllegalArgumentException() ;
+			throw new IllegalArgumentException("null") ;
 		}
 		else 
 		{
