@@ -30,7 +30,7 @@ public class Facture
 		this.client=client;
 	}
 
-	public Facture(int montant, Client client)  throws IllegalArgumentException
+	public Facture(int montant, Client client)  
 	{
 		try 
 		{
@@ -52,7 +52,7 @@ public class Facture
 		}
 	}
 	
-	public Facture(LocalDate date,int montant,boolean reglement,Client client )  throws IllegalArgumentException
+	public Facture(LocalDate date,int montant,boolean reglement,Client client ) 
 	{
 		try 
 		{
