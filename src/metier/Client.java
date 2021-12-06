@@ -120,7 +120,7 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture (int montant, boolean reglee) 
+	public Facture createFacture (int montant, boolean reglee) throws IllegalArgumentException
 	{
 		if(montant<0) 
 		{
@@ -140,7 +140,7 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture(int montant)
+	public Facture createFacture(int montant) throws IllegalArgumentException
 	{
 		if(montant<0) 
 		{
