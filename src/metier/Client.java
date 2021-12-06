@@ -122,26 +122,17 @@ public class Client
 	
 	public Facture createFacture (int montant, boolean reglee) 
 	{
-		try 
+		if(montant<0) 
 		{
-			if(montant<0) 
-			{
-				throw new IllegalArgumentException() ;
-			}
-			else 
-			{
-				Facture f = new Facture(montant,reglee,this);
-				listedesfacture.add(f);
-				return f;
-			}
+			throw new IllegalArgumentException() ;
 		}
-		catch(IllegalArgumentException e) 
+		else 
 		{
-	        System.out.println("null");	
-	        return null;
+			Facture f = new Facture(montant,reglee,this);
+			listedesfacture.add(f);
+			return f;
 		}
-	
-	}
+	}	
 
 	/**
 	 * Créé une facture.
@@ -151,26 +142,16 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		try 
+		if(montant<0) 
 		{
-			if(montant<0) 
-			{
-				throw new IllegalArgumentException() ;
-			}
-			else 
-			{
-				Facture f = new Facture(montant,this);
-				listedesfacture.add(f);
-				return f;
-			}
+			throw new IllegalArgumentException() ;
 		}
-		catch(IllegalArgumentException e) 
+		else 
 		{
-	        System.out.println("null");	
-	        return null;
+			Facture f = new Facture(montant, this);
+			listedesfacture.add(f);
+			return f;
 		}
-	
-	}
 	}
 	public void delete()
 	{
